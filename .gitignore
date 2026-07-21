@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node (if you ever add a build step)
+node_modules/
+dist/
+.env
+.env.local
+
+# OS junk
+Thumbs.db
+desktop.ini
+
+# Original heavy source images (already optimized into web versions in assets/)
+assets/heros_page_bg.png
+assets/herospage.png
+assets/new_hero.png
+assets/IMG_*.JPG
+assets/Photo-*.jpg
+assets/Photo-*.JPG
+assets/swiss.png
+assets/b2b.png
+assets/b2c.png
+assets/photo1.png
+assets/VELOR logotype-01.png
+assets/news1.jpeg
+assets/news2.jpg
