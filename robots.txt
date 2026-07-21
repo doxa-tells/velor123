@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /assets/Gilroy for kazakh/
+Disallow: /assets/F37 Blanka VF/
+Disallow: /assets/cynzel for kazakh/
+
+Sitemap: https://velor.academy/sitemap.xml

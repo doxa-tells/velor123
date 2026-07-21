@@ -27,6 +27,13 @@ python3 -m http.server 8000
 
 Статика — можно класть куда угодно: GitHub Pages, Netlify, Vercel, Cloudflare Pages, любой хостинг.
 
+## SEO
+
+- `robots.txt` и `sitemap.xml` лежат в корне — рассчитаны на домен `https://velor.academy`.
+- Canonical, hreflang (`?lang=ru|kz|en`), Open Graph, Twitter Cards и JSON-LD (EducationalOrganization, WebSite, FAQPage) — в `<head>` `index.html`.
+- После деплоя: добавить сайт в Google Search Console и Яндекс.Вебмастер, отправить sitemap, проверить разметку через validator.schema.org.
+- При смене домена — заменить `velor.academy` в `index.html`, `robots.txt`, `sitemap.xml`.
+
 ## Админка
 
 Раздел публикации новостей живёт по адресу `/index.html#admin`. Пароль задан в коде в константе `ADMIN_PASS` — поменять перед публикацией.
