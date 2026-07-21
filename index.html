@@ -2128,10 +2128,16 @@ section { padding: clamp(60px, 9vw, 140px) 0; position: relative; }
 .map-wrap {
   aspect-ratio: 4 / 3;
   border-radius: 6px; overflow: hidden;
-  border: 1px solid var(--line-strong);
-  background: var(--navy);
+  border: 1px solid var(--gold-line);
+  background: var(--navy-deepest);
+  position: relative;
 }
-.map-wrap iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.3) brightness(0.85); }
+.map-wrap iframe {
+  width: 100%; height: 100%; border: 0;
+  display: block;
+  /* Slight desaturation + darkening so map looks premium and matches brand */
+  filter: grayscale(0.15) brightness(0.9) contrast(1.05);
+}
 
 /* ============================================
    FOOTER
@@ -2773,7 +2779,7 @@ const I18N = {
       eyebrow: "О нас",
       title_a: "Сервис формируется", title_b: "через образование, практику и команды",
       sub: "VELOR Academy — это пространство, где соединяются образование, практика, бизнес и профессиональное сообщество. Мы верим: сильная сервисная культура формируется там, где обучение, практика и индустрия работают вместе.",
-      addr_l: "Адрес", addr_v: "Астана, Казахстан",
+      addr_l: "Адрес", addr_v: "ул. Сарайшык, 11/1, Астана",
       phone_l: "Телефон", email_l: "Email", lead_l: "Руководитель академии"
     }
   },
@@ -3017,7 +3023,7 @@ const I18N = {
       eyebrow: "Біз туралы",
       title_a: "Сервис білім, тәжірибе", title_b: "және командалар арқылы қалыптасады",
       sub: "VELOR Academy — білім, тәжірибе, бизнес және кәсіби қауымдастық бірігетін кеңістік.",
-      addr_l: "Мекенжай", addr_v: "Астана, Қазақстан",
+      addr_l: "Мекенжай", addr_v: "Сарайшық к-сі, 11/1, Астана",
       phone_l: "Телефон", email_l: "Email", lead_l: "Академия басшысы"
     }
   },
@@ -3261,7 +3267,7 @@ const I18N = {
       eyebrow: "About",
       title_a: "Service is shaped", title_b: "through education, practice and teams",
       sub: "VELOR Academy is a space where education, practice, business and the professional community come together. We believe a strong service culture is built where learning, practice and industry work as one.",
-      addr_l: "Address", addr_v: "Astana, Kazakhstan",
+      addr_l: "Address", addr_v: "11/1 Saraishyk St, Astana",
       phone_l: "Phone", email_l: "Email", lead_l: "Head of Academy"
     }
   }
@@ -4018,7 +4024,11 @@ function renderAbout() {
           </div>
         </div>
         <div class="map-wrap reveal delay-1">
-          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=71.40%2C51.10%2C71.50%2C51.16&layer=mapnik&marker=51.128%2C71.430" loading="lazy"></iframe>
+          <iframe
+            src="https://yandex.com/map-widget/v1/?ll=71.427%2C51.129&z=17&pt=71.427%2C51.129%2Cpm2rdm"
+            loading="lazy"
+            allow="fullscreen"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
