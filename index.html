@@ -63,7 +63,12 @@
       },
       "areaServed": ["Казахстан", "Центральная Азия"],
       "knowsLanguage": ["ru", "kk", "en"],
-      "sameAs": []
+      "sameAs": [
+        "https://www.instagram.com/velor.academy/",
+        "https://www.youtube.com/@VELORACADEMY",
+        "https://www.linkedin.com/company/veloracademy/",
+        "https://www.facebook.com/profile.php?id=61590803226922"
+      ]
     },
     {
       "@type": "WebSite",
@@ -284,7 +289,7 @@ h1, h2, h3, h4 {
   letter-spacing: -0.005em;
   color: var(--ivory);
 }
-h1 { font-size: clamp(2.6rem, 6vw, 5.6rem); font-weight: 700; letter-spacing: -0.015em; }
+h1 { font-size: clamp(2.3rem, 4.6vw, 4.2rem); font-weight: 700; letter-spacing: -0.015em; }
 h2 { font-size: clamp(2.1rem, 4.5vw, 3.8rem); font-weight: 700; letter-spacing: -0.01em; }
 h3 { font-size: clamp(1.55rem, 2.6vw, 2.3rem); font-weight: 700; }
 h4 { font-size: clamp(1.2rem, 1.65vw, 1.5rem); font-weight: 700; letter-spacing: 0.005em; }
@@ -1828,6 +1833,30 @@ section { padding: clamp(60px, 9vw, 140px) 0; position: relative; }
 }
 .program ul li:last-child { border-bottom: none; }
 
+/* Program catalog (detailed course cards) */
+.catalog-group-title {
+  margin: 72px 0 24px;
+  font-size: 0.78rem; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600;
+}
+.catalog-group-title:first-of-type { margin-top: 48px; }
+.program .program-en {
+  font-size: 0.74rem; color: var(--muted-soft);
+  letter-spacing: 0.05em; font-style: italic;
+  margin: -10px 0 16px;
+}
+.program .program-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+.program .program-who {
+  font-size: 0.82rem; color: var(--muted); line-height: 1.6;
+  margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line);
+}
+.program .program-who strong { color: var(--ivory); font-weight: 600; }
+.program .program-meta {
+  display: block; margin-top: 16px;
+  font-size: 0.74rem; color: var(--gold);
+  letter-spacing: 0.08em;
+}
+
 /* Metrics grid */
 .metrics-grid {
   display: grid;
@@ -2453,8 +2482,8 @@ section { padding: clamp(60px, 9vw, 140px) 0; position: relative; }
   body { font-size: 1.05rem; }
   .hero-content { max-width: 820px; }
   /* Cap h1 so it doesn't grow to 90px+ on 5K/4K screens */
-  h1 { font-size: clamp(3rem, 3.5vw, 4.6rem); }
-  .hero h1 { font-size: clamp(2.6rem, 3vw, 3.8rem); }
+  h1 { font-size: clamp(2.6rem, 3vw, 3.9rem); }
+  .hero h1 { font-size: clamp(2.4rem, 2.8vw, 3.5rem); }
   h2 { font-size: clamp(2.4rem, 3vw, 3.8rem); }
   .program-cards { grid-template-columns: repeat(4, 1fr); gap: 36px; }
   .big-numbers-grid { gap: 90px; }
@@ -2626,6 +2655,12 @@ section { padding: clamp(60px, 9vw, 140px) 0; position: relative; }
           <li><a href="tel:+77774077404">+7 (777) 407-74-04</a></li>
           <li><a href="mailto:o.iksanova@ssd.team">o.iksanova@ssd.team</a></li>
           <li data-i18n="footer.city">Астана, Казахстан</li>
+          <li class="footer-socials">
+            <a href="https://www.instagram.com/velor.academy/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a> ·
+            <a href="https://www.youtube.com/@VELORACADEMY" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a> ·
+            <a href="https://www.linkedin.com/company/veloracademy/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a> ·
+            <a href="https://www.facebook.com/profile.php?id=61590803226922" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -2831,7 +2866,27 @@ const I18N = {
       r3_t: "Эффективность сотрудников", r3: ["+20–30% уверенности в работе с клиентами", "−15–25% ошибок в сервисных процессах", "+10–15% производительности команд", "+20% качества управления сменами"],
       r4_t: "Снижение операционных потерь", r4: ["−10–20% текучести персонала", "−10–15% времени адаптации новичков", "−5–10% потерь из-за ошибок сервиса", "−15–20% конфликтов внутри команды"],
       cta_title: "Готовы развивать команду?",
-      cta_sub: "Расскажите о ваших задачах — мы предложим программу, адаптированную под индустрию и уровень сотрудников."
+      cta_sub: "Расскажите о ваших задачах — мы предложим программу, адаптированную под индустрию и уровень сотрудников.",
+      catalog_eyebrow: "Каталог программ",
+      catalog_title: "Корпоративные и executive-программы",
+      catalog_sub: "Закрытые корпоративные потоки с сертификатами VELOR + Swiss-SASEM.",
+      catalog: [
+        {
+          group: "Корпоративные программы для среднего звена",
+          items: [
+            { t: "Предпринимательское превосходство франчайзи", en: "Franchisee Entrepreneurial Excellence", d: "Executive-программа по управлению франшизой: экономика точки, стандарты сети и рост бизнеса.", who: "Владельцы и операторы франшиз, среднее звено управления в сети.", meta: "27 часов (3 дня) · закрытый корпоративный поток · сертификат VELOR + Swiss-SASEM" },
+            { t: "Совершенство супервайзерского управления", en: "Supervisory Management Excellence", d: "Управленческая программа для линейных руководителей: организация смены, управление командой и операционная эффективность.", who: "Супервайзеры точек, руководители смен и менеджеры среднего звена.", meta: "27 часов (3 дня) · закрытый поток · сертификат VELOR + Swiss-SASEM" },
+            { t: "Исполнительный сертификат «Продажи и маркетинг»", en: "Executive Certificate in Sales & Marketing", d: "Практическая программа по продажам и маркетингу со специализацией под отрасль: турфирмы, отели, общепит и другие.", who: "Старшие консультанты, руководители групп и филиалов, менеджеры по работе с клиентами.", meta: "32 часа (4 дня) · закрытый поток · сертификат VELOR + Swiss-SASEM · 5 ECTS" }
+          ]
+        },
+        {
+          group: "Executive-программы для топ-менеджмента",
+          items: [
+            { t: "Executive Certificate Real Estate Management — General Track", en: "", d: "Топ-программа по управлению коммерческой недвижимостью: управление активами бизнес-центров, ритейла, mixed-use и логистики.", who: "Управляющие директора и GM, ассет-менеджеры бизнес-центров, ритейла и логистики, владельцы недвижимости.", meta: "54 ак. часа очно + 10 онлайн-сессий · 5 ECTS · английский с синхронным переводом · преподаватели Swiss-SASEM" },
+            { t: "Executive Certificate Real Estate Management — Hospitality Track", en: "", d: "Executive-программа по управлению гостиничной недвижимостью как активом: экономика отеля, инвестиции и девелопмент.", who: "Владельцы отелей и сетей, hotel asset managers, инвесторы и девелоперы, GM на пути к роли владельца.", meta: "54 ак. часа очно + 10 онлайн-сессий · 5 ECTS · английский с синхронным переводом · преподаватели Swiss-SASEM" }
+          ]
+        }
+      ]
     },
     students: {
       eyebrow: "Для слушателей · B2C",
@@ -2846,7 +2901,26 @@ const I18N = {
       programs_title: "Направления обучения",
       programs_sub: "Каждая программа модульная — выбирайте то, что соответствует вашей роли и целям.",
       cta_title: "Начните обучение",
-      cta_sub: "Оставьте заявку, и мы расскажем о ближайшем наборе и подходящих программах."
+      cta_sub: "Оставьте заявку, и мы расскажем о ближайшем наборе и подходящих программах.",
+      catalog: [
+        {
+          group: "Базовые программы для линейных сотрудников ХоРеКа",
+          items: [
+            { t: "Основы обслуживания службы приёма и размещения", en: "Fundamentals of Front Office Service", d: "Практический курс по работе ресепшн: стандарты гостевого сервиса, заселение и выселение, работа в системе PMS Opera.", who: "Администраторы ресепшн и стажёры, сотрудники гостевого сервиса, супервайзеры смен, ночные аудиторы, FO-менеджеры.", meta: "30 часов · очно с практикой" },
+            { t: "Основы хаускипинга", en: "Fundamentals of Housekeeping Service", d: "Стандарты уборки номеров и общественных зон, организация работы службы и контроль качества — с отработкой на практике.", who: "Горничные, хаусмены, уборщики общественных зон, супервайзеры хаускипинга и новые сотрудники.", meta: "30 часов · очно" },
+            { t: "Основы ресторанного сервиса", en: "Fundamentals of Restaurant Service", d: "Стандарты обслуживания в ресторане: сервировка, работа с гостем и техники продаж (апселл) — теория и практика в зале.", who: "Официанты и стажёры, хостес и администраторы, старшие официанты, менеджеры ресторана, F&B-специалисты.", meta: "30 часов · очно" }
+          ]
+        },
+        {
+          group: "Профессиональный английский для сферы услуг",
+          items: [
+            { t: "Профессиональный английский для службы приёма", en: "Professional English for Front-Office Staff", d: "Рабочий английский для общения с гостями на ресепшн: заселение, запросы, решение нестандартных ситуаций.", who: "Администраторы отелей и апарт-отелей, ресепшн медклиник, фитнес- и wellness-центров, операторы колл-центров.", meta: "30 часов · 1 месяц · очно" },
+            { t: "Профессиональный английский для ресторанного сервиса", en: "Professional English for Restaurant Service", d: "Английский для работы в зале и баре: приём заказа, презентация меню, общение с иностранными гостями.", who: "Официанты, бармены, хостес, менеджеры ресторана, супервайзеры смены.", meta: "30 часов · 3 месяца · очно" },
+            { t: "Профессиональный английский для хаускипинга", en: "Professional English for Housekeeping Staff", d: "Базовый рабочий английский для сотрудников хаускипинга: общение с гостями и коллегами в типовых рабочих ситуациях.", who: "Горничные, хаусмены, сотрудники общественных зон, супервайзеры, кадровый резерв.", meta: "20 часов · 2 месяца · очно" },
+            { t: "Медицинский английский", en: "Medical English", d: "Профессионально-ориентированный английский для медицинской среды: общение с пациентами, приём и сопровождение, профессиональная терминология.", who: "Врачи, медсёстры и медбратья, фельдшеры, администраторы и координаторы медцентров, студенты медвузов.", meta: "30 часов · очно" }
+          ]
+        }
+      ]
     },
     infra: {
       eyebrow: "Инфраструктура",
@@ -2865,14 +2939,26 @@ const I18N = {
       title_a: "Наша", title_b: "команда",
       sub: "Люди, которые ведут академию — от преподавателей до операционной команды.",
       members: [
-        { name: "Ольга Иксанова", role: "Руководитель академии", photo: "assets/olga.jpg" },
-        { name: "Дастан Сейтказин", role: "Академический директор", photo: "assets/%D0%94%D0%B0%D1%81%D1%82%D0%B0%D0%BD.png" },
-        { name: "Роза Муханбетжанова", role: "Преподаватель английского", photo: "assets/%D0%A0%D0%BE%D0%B7%D0%B0.png" },
-        { name: "Асель Жанзакова", role: "Преподаватель английского", photo: "assets/%D0%90%D1%81%D0%B5%D0%BB%D1%8C.png" },
-        { name: "Ажар Ахметхан", role: "Маркетинг и коммуникации", photo: "assets/%D0%90%D0%B6%D0%B0%D1%80.png" },
-        { name: "Жасулан Тенирбергенов", role: "Развитие партнёрств", photo: "assets/%D0%96%D0%B0%D1%81%D1%83%D0%BB%D0%B0%D0%BD.png" },
-        { name: "Рамазан", role: "Визуальный контент", photo: "assets/%D0%A0%D0%B0%D0%BC%D0%B0%D0%B7%D0%B0%D0%BD.png" }
-      ]
+        { name: "Ольга Иксанова", role: "Руководитель академии", photo: "assets/team-olga.jpg" },
+        { name: "Дастан Сейтказин", role: "Академический директор", photo: "assets/team-dastan.jpg" },
+        { name: "Роза Муханбетжанова", role: "Преподаватель английского", photo: "assets/team-roza.jpg" },
+        { name: "Асель Жанзакова", role: "Преподаватель английского", photo: "assets/team-asel.jpg" },
+        { name: "Ажар Ахметхан", role: "Маркетинг и коммуникации", photo: "assets/team-azhar.jpg" },
+        { name: "Жасулан Тенирбергенов", role: "Развитие партнёрств", photo: "assets/team-zhasulan.jpg" },
+        { name: "Рамазан", role: "Визуальный контент", photo: "assets/team-ramazan.jpg" }
+      ],
+      partners: {
+        eyebrow: "Академическое партнёрство",
+        title_a: "Швейцарский академический", title_b: "факультет",
+        intro: "Программы VELOR реализуются в партнёрстве со Swiss-SASEM — швейцарской бизнес-школой в Лозанне, чьи программы MBA и DBA аккредитованы агентством ARQA, членом ENQA. Профессора ниже обеспечивают академическое руководство и экспертизу в рамках этого партнёрства.",
+        members: [
+          { name: "Проф. Доминик А. Г. Джордан", role: "Ректор", cred: "BSc (Hons), Университет Букингема · MBA, Эдинбургский университет", bio: "Возглавляет стратегическое развитие и академическое управление Swiss-SASEM. Основатель школы, убеждённый сторонник персонализированного, студентоцентричного образования. Курирует докторантуру и возглавляет Академический совет.", photo: "assets/partners/jordan.jpg", initials: "DJ" },
+          { name: "Проф. д-р Рут Паскье (Риос-Моралес)", role: "Академический декан", cred: "PhD, международная экономическая политика, Университет Ольстера", bio: "Директор по Швейцарии EuroMed Research Business Institute, приглашённый академик Тринити-колледжа (Дублин). Исследования отмечены UNCTAD и Всемирным банком. Автор 27 научных статей, 34 докладов и двух книг.", photo: "assets/partners/pasquier.jpg", initials: "RP" },
+          { name: "Проф. д-р Александр Койчубаев", role: "Декан постдипломных программ", cred: "PhD в экономике · MBA, Swiss-SASEM", bio: "Более 18 лет в высшем образовании, науке и интернационализации. Эксперт по международным проектным командам, стратегическому консалтингу и программам регионального развития университетов.", photo: "assets/partners/koichubayev.jpg", initials: "АК" },
+          { name: "Проф. Бруно Дар", role: "Директор по международному развитию", cred: "HEC Entrepreneurship · Hermès Executive Management Certificate (INSEAD)", bio: "20 лет в швейцарской индустрии люксовых часов: Frédérique Constant, Alpina, Hermès. С 2013 года — стратегический консультант Ulysse Nardin, DeWitt и Bovet. Преподаёт брендинг и люкс-маркетинг в Университете Женевы, INSEEC и Swiss-SASEM.", photo: "assets/partners/dard.jpg", initials: "BD" },
+          { name: "Проф. Чиприан Флорян", role: "Операционный и стратегический менеджмент", cred: "MBA, Royal Holloway London · MBA, Strasbourg · IMD Executive Programs", bio: "20 лет управленческого опыта в FMCG и фармацевтике: Firmenich, Novartis, Ecolab, Mars/Wrigley. 10 лет преподавал в ENIM (Франция). Специалист по операционным трансформациям, цепочкам поставок и кросс-культурному менеджменту.", photo: "assets/partners/florean.jpg", initials: "CF" }
+        ]
+      }
     },
     education: {
       eyebrow: "Скоро",
@@ -2893,7 +2979,7 @@ const I18N = {
       title_a: "Сервис формируется", title_b: "через образование, практику и команды",
       sub: "VELOR Academy — это пространство, где соединяются образование, практика, бизнес и профессиональное сообщество. Мы верим: сильная сервисная культура формируется там, где обучение, практика и индустрия работают вместе.",
       addr_l: "Адрес", addr_v: "ул. Сарайшык, 11/1, Астана",
-      phone_l: "Телефон", email_l: "Email", lead_l: "Руководитель академии"
+      phone_l: "Телефон", email_l: "Email", lead_l: "Руководитель академии", socials_l: "Соцсети"
     }
   },
 
@@ -3075,7 +3161,26 @@ const I18N = {
       r3_t: "Қызметкерлердің тиімділігі", r3: ["+20–30% сенімділік", "−15–25% қателер", "+10–15% өнімділік", "+20% ауысым сапасы"],
       r4_t: "Операциялық шығындардың төмендеуі", r4: ["−10–20% кадр тұрақтамауы", "−10–15% бейімдеу уақыты", "−5–10% сервис қателері", "−15–20% жанжалдар"],
       cta_title: "Командаңызды дамытуға дайынсыз ба?",
-      cta_sub: "Тапсырмаларыңыз туралы айтыңыз — индустрияға сай бағдарлама ұсынамыз."
+      cta_sub: "Тапсырмаларыңыз туралы айтыңыз — индустрияға сай бағдарлама ұсынамыз.",
+      catalog_title: "Корпоративтік және executive-бағдарламалар",
+      catalog_sub: "VELOR + Swiss-SASEM сертификаттарымен жабық корпоративтік ағындар.",
+      catalog: [
+        {
+          group: "Орта буынға арналған корпоративтік бағдарламалар",
+          items: [
+            { t: "Франчайзидің кәсіпкерлік шеберлігі", en: "Franchisee Entrepreneurial Excellence", d: "Франшизаны басқару бойынша executive-бағдарлама: нүкте экономикасы, желі стандарттары және бизнес өсімі.", who: "Франшиза иелері мен операторлары, желінің орта буын басшылары.", meta: "27 сағат (3 күн) · жабық корпоративтік ағын · VELOR + Swiss-SASEM сертификаты" },
+            { t: "Супервайзерлік басқару шеберлігі", en: "Supervisory Management Excellence", d: "Желілік басшыларға арналған басқару бағдарламасы: ауысымды ұйымдастыру, команданы басқару және операциялық тиімділік.", who: "Нүкте супервайзерлері, ауысым басшылары, орта буын менеджерлері.", meta: "27 сағат (3 күн) · жабық ағын · VELOR + Swiss-SASEM сертификаты" },
+            { t: "«Сату және маркетинг» атқарушы сертификаты", en: "Executive Certificate in Sales & Marketing", d: "Салаға бейімделген сату және маркетинг бойынша практикалық бағдарлама: турфирмалар, қонақүйлер, қоғамдық тамақтану және т.б.", who: "Аға кеңесшілер, топ пен филиал басшылары, клиенттермен жұмыс менеджерлері.", meta: "32 сағат (4 күн) · жабық ағын · VELOR + Swiss-SASEM сертификаты · 5 ECTS" }
+          ]
+        },
+        {
+          group: "Топ-менеджментке арналған executive-бағдарламалар",
+          items: [
+            { t: "Executive Certificate Real Estate Management — General Track", en: "", d: "Коммерциялық жылжымайтын мүлікті басқару бойынша топ-бағдарлама: бизнес-орталықтар, ритейл, mixed-use және логистика активтерін басқару.", who: "Басқарушы директорлар мен GM, ассет-менеджерлер, жылжымайтын мүлік иелері.", meta: "54 акад. сағат күндізгі + 10 онлайн-сессия · 5 ECTS · синхронды аудармамен ағылшын тілі · Swiss-SASEM оқытушылары" },
+            { t: "Executive Certificate Real Estate Management — Hospitality Track", en: "", d: "Қонақүй жылжымайтын мүлкін актив ретінде басқару жөніндегі executive-бағдарлама: қонақүй экономикасы, инвестициялар және девелопмент.", who: "Қонақүй мен желі иелері, hotel asset managers, инвесторлар мен девелоперлер, GM.", meta: "54 акад. сағат күндізгі + 10 онлайн-сессия · 5 ECTS · синхронды аудармамен ағылшын тілі · Swiss-SASEM оқытушылары" }
+          ]
+        }
+      ]
     },
     students: {
       eyebrow: "Тыңдаушыларға · B2C",
@@ -3090,7 +3195,26 @@ const I18N = {
       programs_title: "Оқыту бағыттары",
       programs_sub: "Әр бағдарлама модульдік — рөліңізге сай таңдаңыз.",
       cta_title: "Оқуды бастаңыз",
-      cta_sub: "Өтінім қалдырыңыз, жақын ағым және бағдарламалар туралы айтамыз."
+      cta_sub: "Өтінім қалдырыңыз, жақын ағым және бағдарламалар туралы айтамыз.",
+      catalog: [
+        {
+          group: "ХоРеКа желілік қызметкерлеріне арналған базалық бағдарламалар",
+          items: [
+            { t: "Қабылдау және орналастыру қызметінің негіздері", en: "Fundamentals of Front Office Service", d: "Ресепшн жұмысы бойынша практикалық курс: қонақ сервисінің стандарттары, орналастыру мен шығару, PMS Opera жүйесімен жұмыс.", who: "Ресепшн әкімшілері мен тағылымдамашылар, қонақ сервисі қызметкерлері, ауысым супервайзерлері, түнгі аудиторлар, FO-менеджерлер.", meta: "30 сағат · практикамен күндізгі" },
+            { t: "Хаускипинг негіздері", en: "Fundamentals of Housekeeping Service", d: "Нөмірлер мен қоғамдық аймақтарды жинау стандарттары, қызмет жұмысын ұйымдастыру және сапаны бақылау — практикада пысықтаумен.", who: "Горничныйлар, хаусмендер, қоғамдық аймақ қызметкерлері, хаускипинг супервайзерлері, жаңа қызметкерлер.", meta: "30 сағат · күндізгі" },
+            { t: "Мейрамхана сервисінің негіздері", en: "Fundamentals of Restaurant Service", d: "Мейрамханадағы қызмет көрсету стандарттары: үстел жасау, қонақпен жұмыс және сату техникалары (апселл) — теория мен залдағы практика.", who: "Даяшылар мен тағылымдамашылар, хостес пен әкімшілер, аға даяшылар, мейрамхана менеджерлері, F&B-мамандар.", meta: "30 сағат · күндізгі" }
+          ]
+        },
+        {
+          group: "Қызмет көрсету саласына арналған кәсіби ағылшын тілі",
+          items: [
+            { t: "Қабылдау қызметіне арналған кәсіби ағылшын тілі", en: "Professional English for Front-Office Staff", d: "Ресепшнде қонақтармен сөйлесуге арналған жұмыс ағылшыншасы: орналастыру, сұраныстар, стандартты емес жағдайларды шешу.", who: "Қонақүй мен апарт-қонақүй әкімшілері, медклиника, фитнес және wellness орталықтарының ресепшні, колл-орталық операторлары.", meta: "30 сағат · 1 ай · күндізгі" },
+            { t: "Мейрамхана сервисіне арналған кәсіби ағылшын тілі", en: "Professional English for Restaurant Service", d: "Зал мен барда жұмыс істеуге арналған ағылшын тілі: тапсырыс қабылдау, мәзірді таныстыру, шетелдік қонақтармен сөйлесу.", who: "Даяшылар, бармендер, хостес, мейрамхана менеджерлері, ауысым супервайзерлері.", meta: "30 сағат · 3 ай · күндізгі" },
+            { t: "Хаускипингке арналған кәсіби ағылшын тілі", en: "Professional English for Housekeeping Staff", d: "Хаускипинг қызметкерлеріне арналған базалық жұмыс ағылшыншасы: типтік жұмыс жағдайларында қонақтармен және әріптестермен сөйлесу.", who: "Горничныйлар, хаусмендер, қоғамдық аймақ қызметкерлері, супервайзерлер, кадрлық резерв.", meta: "20 сағат · 2 ай · күндізгі" },
+            { t: "Медициналық ағылшын тілі", en: "Medical English", d: "Медициналық ортаға арналған кәсіби бағытталған ағылшын тілі: пациенттермен сөйлесу, қабылдау мен сүйемелдеу, кәсіби терминология.", who: "Дәрігерлер, мейірбикелер, фельдшерлер, медорталық әкімшілері мен үйлестірушілері, медициналық ЖОО студенттері.", meta: "30 сағат · күндізгі" }
+          ]
+        }
+      ]
     },
     infra: {
       eyebrow: "Инфрақұрылым",
@@ -3109,14 +3233,26 @@ const I18N = {
       title_a: "Біздің", title_b: "командамыз",
       sub: "Академияны жүргізетін адамдар — оқытушылардан операциялық командаға дейін.",
       members: [
-        { name: "Ольга Иксанова", role: "Академия басшысы", photo: "assets/olga.jpg" },
-        { name: "Дастан Сейтказин", role: "Академиялық директор", photo: "assets/%D0%94%D0%B0%D1%81%D1%82%D0%B0%D0%BD.png" },
-        { name: "Роза Муханбетжанова", role: "Ағылшын тілі оқытушысы", photo: "assets/%D0%A0%D0%BE%D0%B7%D0%B0.png" },
-        { name: "Асель Жанзакова", role: "Ағылшын тілі оқытушысы", photo: "assets/%D0%90%D1%81%D0%B5%D0%BB%D1%8C.png" },
-        { name: "Ажар Ахметхан", role: "Маркетинг және коммуникациялар", photo: "assets/%D0%90%D0%B6%D0%B0%D1%80.png" },
-        { name: "Жасулан Тенирбергенов", role: "Серіктестікті дамыту", photo: "assets/%D0%96%D0%B0%D1%81%D1%83%D0%BB%D0%B0%D0%BD.png" },
-        { name: "Рамазан", role: "Визуалды контент", photo: "assets/%D0%A0%D0%B0%D0%BC%D0%B0%D0%B7%D0%B0%D0%BD.png" }
-      ]
+        { name: "Ольга Иксанова", role: "Академия басшысы", photo: "assets/team-olga.jpg" },
+        { name: "Дастан Сейтказин", role: "Академиялық директор", photo: "assets/team-dastan.jpg" },
+        { name: "Роза Муханбетжанова", role: "Ағылшын тілі оқытушысы", photo: "assets/team-roza.jpg" },
+        { name: "Асель Жанзакова", role: "Ағылшын тілі оқытушысы", photo: "assets/team-asel.jpg" },
+        { name: "Ажар Ахметхан", role: "Маркетинг және коммуникациялар", photo: "assets/team-azhar.jpg" },
+        { name: "Жасулан Тенирбергенов", role: "Серіктестікті дамыту", photo: "assets/team-zhasulan.jpg" },
+        { name: "Рамазан", role: "Визуалды контент", photo: "assets/team-ramazan.jpg" }
+      ],
+      partners: {
+        eyebrow: "Академиялық серіктестік",
+        title_a: "Швейцариялық академиялық", title_b: "факультет",
+        intro: "VELOR бағдарламалары Swiss-SASEM — Лозаннадағы швейцариялық бизнес-мектеппен серіктестікте жүзеге асырылады. Оның MBA және DBA бағдарламалары ENQA мүшесі ARQA агенттігінде аккредиттелген. Төмендегі профессорлар осы серіктестік аясында академиялық жетекшілік пен сараптама жасайды.",
+        members: [
+          { name: "Проф. Доминик А. Г. Джордан", role: "Ректор", cred: "BSc (Hons), Букингем университеті · MBA, Эдинбург университеті", bio: "Swiss-SASEM стратегиялық дамуы мен академиялық басқаруын жетекшілейді. Мектептің негізін қалаушы, жеке тұлғаға бағытталған білім берудің жақтаушысы. Докторантураға жетекшілік етіп, Академиялық кеңесті басқарады.", photo: "assets/partners/jordan.jpg", initials: "DJ" },
+          { name: "Проф. д-р Рут Паскье (Риос-Моралес)", role: "Академиялық декан", cred: "PhD, халықаралық экономикалық саясат, Ольстер университеті", bio: "EuroMed Research Business Institute-тің Швейцария бойынша директоры, Тринити колледжінің (Дублин) шақырылған академигі. Зерттеулері UNCTAD пен Дүниежүзілік банк тарапынан мойындалған. 27 ғылыми мақала, 34 баяндама және екі кітаптың авторы.", photo: "assets/partners/pasquier.jpg", initials: "RP" },
+          { name: "Проф. д-р Александр Койчубаев", role: "Постдипломдық бағдарламалар деканы", cred: "Экономика PhD · MBA, Swiss-SASEM", bio: "Жоғары білім, ғылым және интернационалдандыру саласында 18 жылдан астам тәжірибе. Халықаралық жобалық топтар, стратегиялық консалтинг және аймақтық даму бағдарламаларының сарапшысы.", photo: "assets/partners/koichubayev.jpg", initials: "АК" },
+          { name: "Проф. Бруно Дар", role: "Халықаралық даму директоры", cred: "HEC Entrepreneurship · Hermès Executive Management Certificate (INSEAD)", bio: "Швейцарияның люкс сағат индустриясында 20 жыл: Frédérique Constant, Alpina, Hermès. 2013 жылдан бері Ulysse Nardin, DeWitt және Bovet стратегиялық кеңесшісі. Женева университетінде, INSEEC пен Swiss-SASEM-де брендинг пен люкс-маркетингтен сабақ береді.", photo: "assets/partners/dard.jpg", initials: "BD" },
+          { name: "Проф. Чиприан Флорян", role: "Операциялық және стратегиялық менеджмент", cred: "MBA, Royal Holloway London · MBA, Strasbourg · IMD Executive Programs", bio: "FMCG және фармацевтика салаларында 20 жылдық басқару тәжірибесі: Firmenich, Novartis, Ecolab, Mars/Wrigley. ENIM-де (Франция) 10 жыл сабақ берген. Операциялық трансформациялар мен жеткізу тізбектерінің маманы.", photo: "assets/partners/florean.jpg", initials: "CF" }
+        ]
+      }
     },
     education: {
       eyebrow: "Жақында",
@@ -3137,7 +3273,7 @@ const I18N = {
       title_a: "Сервис білім, тәжірибе", title_b: "және командалар арқылы қалыптасады",
       sub: "VELOR Academy — білім, тәжірибе, бизнес және кәсіби қауымдастық бірігетін кеңістік.",
       addr_l: "Мекенжай", addr_v: "Сарайшық к-сі, 11/1, Астана",
-      phone_l: "Телефон", email_l: "Email", lead_l: "Академия басшысы"
+      phone_l: "Телефон", email_l: "Email", lead_l: "Академия басшысы", socials_l: "Әлеуметтік желілер"
     }
   },
 
@@ -3319,7 +3455,26 @@ const I18N = {
       r3_t: "Staff effectiveness", r3: ["+20–30% staff confidence with guests", "−15–25% errors in service processes", "+10–15% team productivity", "+20% shift-management quality"],
       r4_t: "Lower operating losses", r4: ["−10–20% staff turnover", "−10–15% onboarding time", "−5–10% losses from service errors", "−15–20% internal team conflict"],
       cta_title: "Ready to develop your team?",
-      cta_sub: "Tell us about your goals — we'll propose a program shaped around your industry and staff levels."
+      cta_sub: "Tell us about your goals — we'll propose a program shaped around your industry and staff levels.",
+      catalog_title: "Corporate & Executive Programs",
+      catalog_sub: "Closed corporate cohorts with VELOR + Swiss-SASEM certificates.",
+      catalog: [
+        {
+          group: "Corporate Programs for Middle Management",
+          items: [
+            { t: "Franchisee Entrepreneurial Excellence", en: "", d: "Executive program in franchise management: unit economics, network standards and business growth.", who: "Franchise owners and operators, mid-level chain management.", meta: "27 hours (3 days) · closed corporate cohort · VELOR + Swiss-SASEM certificate" },
+            { t: "Supervisory Management Excellence", en: "", d: "Management program for line leaders: shift organisation, team management and operational efficiency.", who: "Unit supervisors, shift leaders and middle managers.", meta: "27 hours (3 days) · closed cohort · VELOR + Swiss-SASEM certificate" },
+            { t: "Executive Certificate in Sales & Marketing", en: "", d: "Practical sales and marketing program with industry specialisation: travel agencies, hotels, food service and more.", who: "Senior consultants, team and branch leaders, client relationship managers.", meta: "32 hours (4 days) · closed cohort · VELOR + Swiss-SASEM certificate · 5 ECTS" }
+          ]
+        },
+        {
+          group: "Executive Programs for Senior Leadership",
+          items: [
+            { t: "Executive Certificate Real Estate Management — General Track", en: "", d: "Top-tier program in commercial real estate management: business centre, retail, mixed-use and logistics assets.", who: "Managing directors and GMs, asset managers, property owners.", meta: "54 academic hours on-site + 10 online sessions · 5 ECTS · English with simultaneous interpretation · Swiss-SASEM faculty" },
+            { t: "Executive Certificate Real Estate Management — Hospitality Track", en: "", d: "Executive program in managing hotel real estate as an asset: hotel economics, investment and development.", who: "Hotel and chain owners, hotel asset managers, investors and developers, GMs on the path to ownership.", meta: "54 academic hours on-site + 10 online sessions · 5 ECTS · English with simultaneous interpretation · Swiss-SASEM faculty" }
+          ]
+        }
+      ]
     },
     students: {
       eyebrow: "For Students · B2C",
@@ -3334,7 +3489,26 @@ const I18N = {
       programs_title: "Learning tracks",
       programs_sub: "Every program is modular — choose what fits your role and goals.",
       cta_title: "Begin your studies",
-      cta_sub: "Submit an inquiry and we'll share the next intake and suitable programs."
+      cta_sub: "Submit an inquiry and we'll share the next intake and suitable programs.",
+      catalog: [
+        {
+          group: "Core Programs for HoReCa Line Staff",
+          items: [
+            { t: "Fundamentals of Front Office Service", en: "", d: "Hands-on front desk training: guest service standards, check-in and check-out, and working with Opera PMS.", who: "Front desk agents and trainees, guest service staff, shift supervisors, night auditors, FO managers.", meta: "30 hours · on-site with practice" },
+            { t: "Fundamentals of Housekeeping Service", en: "", d: "Room and public area cleaning standards, department organisation and quality control — with hands-on practice.", who: "Room attendants, housemen, public area cleaners, housekeeping supervisors, new hires.", meta: "30 hours · on-site" },
+            { t: "Fundamentals of Restaurant Service", en: "", d: "Restaurant service standards: table setting, guest interaction and upselling techniques — theory plus floor practice.", who: "Waiters and runners, hostesses, head waiters, restaurant managers, F&B specialists.", meta: "30 hours · on-site" }
+          ]
+        },
+        {
+          group: "Professional English for Service Industries",
+          items: [
+            { t: "Professional English for Front-Office Staff", en: "", d: "Working English for guest communication at the front desk: check-in, requests, handling non-standard situations.", who: "Hotel and aparthotel receptionists, medical clinic, fitness and wellness front desks, call centre operators.", meta: "30 hours · 1 month · on-site" },
+            { t: "Professional English for Restaurant Service", en: "", d: "English for the floor and the bar: taking orders, presenting the menu, communicating with international guests.", who: "Waiters, bartenders, hostesses, restaurant managers, shift supervisors.", meta: "30 hours · 3 months · on-site" },
+            { t: "Professional English for Housekeeping Staff", en: "", d: "Essential working English for housekeeping: communicating with guests and colleagues in typical work situations.", who: "Room attendants, housemen, public area staff, supervisors, talent pool.", meta: "20 hours · 2 months · on-site" },
+            { t: "Medical English", en: "", d: "Profession-oriented English for medical settings: patient communication, reception and care coordination, professional terminology.", who: "Doctors, nurses, paramedics, medical centre administrators and coordinators, medical students.", meta: "30 hours · on-site" }
+          ]
+        }
+      ]
     },
     infra: {
       eyebrow: "Infrastructure",
@@ -3353,14 +3527,26 @@ const I18N = {
       title_a: "Our", title_b: "team",
       sub: "The people running the academy — from instructors to the operations team.",
       members: [
-        { name: "Olga Iksanova", role: "Head of Academy", photo: "assets/olga.jpg" },
-        { name: "Dastan Seitkazin", role: "Academic Director", photo: "assets/%D0%94%D0%B0%D1%81%D1%82%D0%B0%D0%BD.png" },
-        { name: "Roza Mukhanbetzhanova", role: "English Instructor", photo: "assets/%D0%A0%D0%BE%D0%B7%D0%B0.png" },
-        { name: "Asel Zhanzakova", role: "English Instructor", photo: "assets/%D0%90%D1%81%D0%B5%D0%BB%D1%8C.png" },
-        { name: "Azhar Akhmetkhan", role: "Marketing & Communications", photo: "assets/%D0%90%D0%B6%D0%B0%D1%80.png" },
-        { name: "Zhasulan Tenirbergenov", role: "Partnerships", photo: "assets/%D0%96%D0%B0%D1%81%D1%83%D0%BB%D0%B0%D0%BD.png" },
-        { name: "Ramazan", role: "Visual Content", photo: "assets/%D0%A0%D0%B0%D0%BC%D0%B0%D0%B7%D0%B0%D0%BD.png" }
-      ]
+        { name: "Olga Iksanova", role: "Head of Academy", photo: "assets/team-olga.jpg" },
+        { name: "Dastan Seitkazin", role: "Academic Director", photo: "assets/team-dastan.jpg" },
+        { name: "Roza Mukhanbetzhanova", role: "English Instructor", photo: "assets/team-roza.jpg" },
+        { name: "Asel Zhanzakova", role: "English Instructor", photo: "assets/team-asel.jpg" },
+        { name: "Azhar Akhmetkhan", role: "Marketing & Communications", photo: "assets/team-azhar.jpg" },
+        { name: "Zhasulan Tenirbergenov", role: "Partnerships", photo: "assets/team-zhasulan.jpg" },
+        { name: "Ramazan", role: "Visual Content", photo: "assets/team-ramazan.jpg" }
+      ],
+      partners: {
+        eyebrow: "Academic Partnership",
+        title_a: "Our Swiss Academic", title_b: "Faculty",
+        intro: "VELOR programmes are delivered in partnership with Swiss-SASEM, a Swiss business school based in Lausanne whose MBA and DBA programmes are accredited by ARQA, an ENQA member agency. The faculty members below provide academic leadership and expertise within the framework of this partnership.",
+        members: [
+          { name: "Prof. Dominique A. G. Jordan", role: "Rector", cred: "BSc (Hons), University of Buckingham · MBA, University of Edinburgh", bio: "Leads the institution's strategic vision and academic governance. Founded Swiss-SASEM on the conviction that personalised, student-centred education is the most powerful vehicle for transformation. Oversees doctoral supervision and chairs the Academic Council.", photo: "assets/partners/jordan.jpg", initials: "DJ" },
+          { name: "Prof. Dr. Ruth Pasquier (Rios-Morales)", role: "Academic Dean", cred: "PhD in International Business Politics, University of Ulster", bio: "Country Director for Switzerland of the EuroMed Research Business Institute and visiting academic at Trinity College Dublin. Her research has been acknowledged by UNCTAD and the World Bank. Author of 27 journal papers, 34 conference papers, and two books.", photo: "assets/partners/pasquier.jpg", initials: "RP" },
+          { name: "Prof. Dr. Alexandr Koichubayev", role: "Dean of Postgraduate Programs", cred: "PhD in Economics · MBA, Swiss-SASEM", bio: "Over 18 years in higher education, science and internationalisation. Expert in leading international project teams, strategic consulting and regional development programs, and designing joint degree programs for universities.", photo: "assets/partners/koichubayev.jpg", initials: "AK" },
+          { name: "Prof. Bruno Dard", role: "Director of International Development", cred: "HEC Entrepreneurship · Hermès Executive Management Certificate (INSEAD)", bio: "20 years in the Swiss luxury watch sector with Frédérique Constant, Alpina and Hermès. Since 2013, strategic consultant to Ulysse Nardin, DeWitt and Bovet. Teaches Branding and Luxury Marketing at the University of Geneva, INSEEC and Swiss-SASEM.", photo: "assets/partners/dard.jpg", initials: "BD" },
+          { name: "Prof. Ciprian Florean", role: "Operations & Strategic Management", cred: "MBA, Royal Holloway London · MBA, Strasbourg · IMD Executive Programs", bio: "20 years of global leadership experience in FMCG and pharma with Firmenich, Novartis, Ecolab and Mars/Wrigley. 10 years teaching at ENIM (France). Specialist in complex operational transformations, supply chain and cross-cultural management.", photo: "assets/partners/florean.jpg", initials: "CF" }
+        ]
+      }
     },
     education: {
       eyebrow: "Coming soon",
@@ -3381,7 +3567,7 @@ const I18N = {
       title_a: "Service is shaped", title_b: "through education, practice and teams",
       sub: "VELOR Academy is a space where education, practice, business and the professional community come together. We believe a strong service culture is built where learning, practice and industry work as one.",
       addr_l: "Address", addr_v: "11/1 Saraishyk St, Astana",
-      phone_l: "Phone", email_l: "Email", lead_l: "Head of Academy"
+      phone_l: "Phone", email_l: "Email", lead_l: "Head of Academy", socials_l: "Social media"
     }
   }
 };
@@ -3808,6 +3994,28 @@ function renderHome() {
   `;
 }
 
+const CATALOG_WHO = { ru: "Для кого", kz: "Кімге арналған", en: "For whom" };
+
+function renderCatalog(catalog) {
+  if (!catalog) return '';
+  let n = 0;
+  return catalog.map(g => `
+    <div class="catalog-group-title reveal">${g.group}</div>
+    <div class="programs-grid">
+      ${g.items.map((p, i) => { n++; return `
+        <div class="program reveal delay-${i % 4}">
+          <span class="program-num">${String(n).padStart(2, '0')}</span>
+          <h4>${p.t}</h4>
+          ${p.en ? `<div class="program-en">${p.en}</div>` : ''}
+          <p class="program-desc">${p.d}</p>
+          <p class="program-who"><strong>${CATALOG_WHO[currentLang] || CATALOG_WHO.ru}:</strong> ${p.who}</p>
+          <span class="program-meta">${p.meta}</span>
+        </div>
+      `; }).join('')}
+    </div>
+  `).join('');
+}
+
 function renderBusiness() {
   const b = I18N[currentLang].business;
   return `
@@ -3859,6 +4067,18 @@ function renderBusiness() {
       </div>
     </div>
   </section>
+
+  ${b.catalog ? `
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>${b.catalog_title}</h2>
+        <p>${b.catalog_sub}</p>
+      </div>
+      ${renderCatalog(b.catalog)}
+    </div>
+  </section>
+  ` : ''}
 
   <section class="results-section">
     <div class="container">
@@ -3950,20 +4170,7 @@ function renderStudents() {
         <h2>${s.programs_title}</h2>
         <p>${s.programs_sub}</p>
       </div>
-      <div class="programs-grid">
-        ${[
-          { t: b.p1_t, l: b.p1_l, n: '01' },
-          { t: b.p2_t, l: b.p2_l, n: '02' },
-          { t: b.p3_t, l: b.p3_l, n: '03' },
-          { t: b.p4_t, l: b.p4_l, n: '04' }
-        ].map((p, i) => `
-          <div class="program reveal delay-${i}">
-            <span class="program-num">${p.n}</span>
-            <h4>${p.t}</h4>
-            <ul>${p.l.map(item => `<li>${item}</li>`).join('')}</ul>
-          </div>
-        `).join('')}
-      </div>
+      ${renderCatalog(s.catalog)}
     </div>
   </section>
 
@@ -4060,6 +4267,34 @@ function renderTeam() {
     </div>
   </section>
 
+  ${tm.partners ? `
+  <section style="border-top: 1px solid var(--line);">
+    <div class="container">
+      <span class="eyebrow reveal">${tm.partners.eyebrow}</span>
+      <h2 class="h2-compact reveal delay-1">${tm.partners.title_a} <em class="serif-italic gold">${tm.partners.title_b}</em></h2>
+      <p class="reveal delay-2" style="max-width: 780px; margin-top: 18px;">${tm.partners.intro}</p>
+      <div class="team-grid">
+        ${tm.partners.members.map((p, i) => `
+          <div class="team-card reveal delay-${i % 4}">
+            <div class="team-portrait">
+              <div class="initials">${p.initials}</div>
+              <img src="${p.photo}" alt="${p.name} — ${p.role}" loading="lazy"
+                   style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top;"
+                   onerror="this.remove()" />
+            </div>
+            <div class="team-body">
+              <div class="role">${p.role}</div>
+              <h4>${p.name}</h4>
+              <p style="font-size:0.78rem; color:var(--muted-soft); margin-bottom:10px; font-style:italic;">${p.cred}</p>
+              <p>${p.bio}</p>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  </section>
+  ` : ''}
+
   ${renderFormSection()}
   `;
 }
@@ -4155,6 +4390,15 @@ function renderAbout() {
           <div>
             <div class="label">WhatsApp</div>
             <div class="value"><a href="https://wa.me/77774077404" target="_blank" rel="noopener">+7 (777) 407-74-04</a></div>
+          </div>
+          <div>
+            <div class="label">${a.socials_l}</div>
+            <div class="value socials-row">
+              <a href="https://www.instagram.com/velor.academy/" target="_blank" rel="noopener">Instagram</a> ·
+              <a href="https://www.youtube.com/@VELORACADEMY" target="_blank" rel="noopener">YouTube</a> ·
+              <a href="https://www.linkedin.com/company/veloracademy/" target="_blank" rel="noopener">LinkedIn</a> ·
+              <a href="https://www.facebook.com/profile.php?id=61590803226922" target="_blank" rel="noopener">Facebook</a>
+            </div>
           </div>
         </div>
         <div class="map-wrap reveal delay-1">
